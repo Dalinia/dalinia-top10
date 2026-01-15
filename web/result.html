@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dalinia — Votre Top 10</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    h1 { margin: 0 0 8px; }
+    .muted { opacity: .75; line-height: 1.4; }
+    .card { border: 1px solid #e5e5e5; border-radius: 14px; padding: 16px; margin: 12px 0; }
+    .pill { display:inline-block; padding: 3px 10px; border-radius: 999px; border:1px solid #ddd; font-size: 12px; }
+    button { padding: 10px 14px; border-radius: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-weight: 700; }
+    .topbar { display:flex; gap:10px; align-items:center; margin: 12px 0 18px; }
+  </style>
+</head>
+<body>
+
+  <h1>Vos 10 documents essentiels</h1>
+  <p class="muted">Commencez par les 3 premiers : ce sont ceux qui permettront à vos proches d’agir le plus vite.</p>
+
+  <div class="topbar">
+    <button id="btnBack">Modifier mes réponses</button>
+    <button id="btnCopy">Copier mon Top 10</button>
+  </div>
+
+  <div id="content"></div>
+
+  <script>
+    const content = document.getElementById("content");
+    const raw = sessionStorage.getItem("dalinia_top10");
+
+    function safe(x){ return (x === null || x === undefined) ? "" : String(x); }
+
+    if (!raw) {
+      content.innerHTML = `
+        <div class="card">
+          <strong>Aucun résultat trouvé.</strong>
+          <p class="muted">Revenez au formulaire pour générer votre Top 10.</p>
+        </div>
+      `;
+    } else {
+      const items = JSON.parse(raw);
+
+      const html = items.map((it, i) => {
+        const title = safe(it["Document"] || it["Nom"] || it["Titre"]);
+        const consigne = safe(it["Consignes pour la personne-relais"] || it["Consignes"] || it["Consigne"]);
+        const contacts = safe(it["Contacts / organismes à joindre"] || it["Contacts"] || it["Contact"]);
+        const why = safe(it._why);
+
+        return `
+          <div class="card">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="font-weight:800;">${i + 1}. ${title}</div>
+              <span class="pill">score ${safe(it._score)}</span>
+            </div>
+            ${why ? `<div style="margin-top:8px;"><em>Pourquoi :</em> ${why}</div>` : ""}
+            ${consigne ? `<div style="margin-top:8px;"><em>Consigne :</em> ${consigne}</div>` : ""}
+            ${contacts ? `<div style="margin-top:8px;"><em>Contacts :</em> ${contacts}</div>` : ""}
+          </div>
+        `;
+      }).join("");
+
+      content.innerHTML = html;
+    }
+
+    document.getElementById("btnBack").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+
+    document.getElementById("btnCopy").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(document.body.innerText);
+        alert("Copié ✅");
+      } catch (e) {
+        alert("Impossible de copier automatiquement. Sélectionnez et copiez manuellement.");
+      }
+    });
+  </script>
+
+</body>
+</html>
