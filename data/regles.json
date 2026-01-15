@@ -1,0 +1,191 @@
+[
+  {
+    "Règle": "RD0",
+    "Si (condition basée sur les réponses)": "Toujours (quel que soit le cas)",
+    "Documents à proposer (numéro - nom)": "1 - Personnes ressources; 2 - Pièces d'identité et statut; 3 - Actes d'état civil; 4 - Preuves de résidence et d'adresse; 5 - Testament; 6 - Mandat de protection (Québec) ou mandat de protection future (France); 11 - Comptes bancaires (inventaire); 12 - Crédits, cartes et dettes (contrats); 14 - Assurances (vie, invalidité, habitation, automobile, collectives); 19 - Contrats et abonnements; 20 - Accès numériques et mots de passe; 22 - Inventaire des emplacements (où est quoi); 23 - Volontés funéraires et organisation; 24 - Liste des obligations (dettes, paiements essentiels); 26 - Procurations et autorisations temporaires; 27 - Ententes familiales et régime du couple",
+    "Priorité": "Obligatoire",
+    "Pourquoi (résumé)": "Couvre le minimum vital : contacts, identité, documents de protection, finances, assurances, accès et inventaire.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Coordonnées institutions financières (Finances)\n• Factures prioritaires (Finances)\n• Acte de naissance (Identité et statut légal)\n• Carte d’assurance maladie (Identité et statut légal)\n• Certificat de citoyenneté / Carte RP / Permis (Identité et statut légal)\n• Passeport (Identité et statut légal)\n• Pièce d’identité principale (Identité et statut légal)\n• Assurance habitation (Logement et biens)\n• Accès numériques / méthode (Organisation)\n• Contacts clés (Organisation)\n• Instructions quoi faire en premier (Organisation)\n• Personne-relais (Organisation)\n• Volontés personnelles (Organisation)\n• Acte de décès (Situation familiale)\n• Acte de mariage / Contrat d’union (Situation familiale)\n• Jugement de divorce / Séparation (Situation familiale)\n• Instructions particulières (Valeur personnelle)\n• Lettre personnelle (Valeur personnelle)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)\n• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Factures prioritaires (Finances)\n• Acte de naissance (Identité et statut légal)\n• Carte d’assurance maladie (Identité et statut légal)\n• Certificat de citoyenneté / Carte RP / Permis (Identité et statut légal)\n• Passeport (Identité et statut légal)\n• Pièce d’identité principale (Identité et statut légal)\n• Accès numériques / méthode (Organisation)\n• Contacts clés (Organisation)\n• Instructions quoi faire en premier (Organisation)\n• Personne-relais (Organisation)\n• Acte de décès (Situation familiale)"
+  },
+  {
+    "Règle": "RD1",
+    "Si (condition basée sur les réponses)": "Q5 contient Enfant(s) mineur(s)",
+    "Documents à proposer (numéro - nom)": "8 - Organisation des enfants et autorisations; 27 - Ententes familiales et régime du couple; 26 - Procurations et autorisations temporaires",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Continuité des enfants et réduction des risques de conflit; prévoir autorisations et relais.",
+    "Documents détaillés associés (SCORE TOP10)": "• Documents enfants / personnes à charge (Santé)\n• Acte de mariage / Contrat d’union (Situation familiale)\n• Actes de naissance des enfants (Situation familiale)\n• Documents d’adoption (Situation familiale)\n• Jugement de divorce / Séparation (Situation familiale)",
+    "Top 10 (détaillé) associés": "• Documents enfants / personnes à charge (Santé)\n• Actes de naissance des enfants (Situation familiale)\n• Documents d’adoption (Situation familiale)"
+  },
+  {
+    "Règle": "RD2",
+    "Si (condition basée sur les réponses)": "Q5 contient Adulte dépendant (handicap ou besoin d’aide)",
+    "Documents à proposer (numéro - nom)": "7 - Informations de santé (fiche santé, médecins, médicaments); 26 - Procurations et autorisations temporaires; 27 - Ententes familiales et régime du couple",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Sécuriser décisions de soins et gestion quotidienne; clarifier responsabilités.",
+    "Documents détaillés associés (SCORE TOP10)": "• Directives médicales (Santé)\n• Informations médicales importantes (Santé)\n• Liste médicaments / allergies (Santé)\n• Acte de mariage / Contrat d’union (Situation familiale)\n• Jugement de divorce / Séparation (Situation familiale)",
+    "Top 10 (détaillé) associés": "• Directives médicales (Santé)\n• Informations médicales importantes (Santé)\n• Liste médicaments / allergies (Santé)"
+  },
+  {
+    "Règle": "RD3",
+    "Si (condition basée sur les réponses)": "Q7 = Propriétaire d’entreprise",
+    "Documents à proposer (numéro - nom)": "18 - Entreprise; 10 - Impôts et déclarations; 11 - Comptes bancaires (inventaire); 12 - Crédits, cartes et dettes (contrats); 19 - Contrats et abonnements; 20 - Accès numériques et mots de passe; 28 - Inventaire des biens de valeur",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Continuité de l’activité, accès, obligations fiscales et protection des biens de valeur.",
+    "Documents détaillés associés (SCORE TOP10)": "• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Coordonnées institutions financières (Finances)\n• Accès numériques / méthode (Organisation)\n• Document symbolique (Valeur personnelle)",
+    "Top 10 (détaillé) associés": "• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Accès numériques / méthode (Organisation)"
+  },
+  {
+    "Règle": "RD4",
+    "Si (condition basée sur les réponses)": "Q7 = Travailleur autonome",
+    "Documents à proposer (numéro - nom)": "10 - Impôts et déclarations; 11 - Comptes bancaires (inventaire); 12 - Crédits, cartes et dettes (contrats); 19 - Contrats et abonnements; 20 - Accès numériques et mots de passe",
+    "Priorité": "Élevée",
+    "Pourquoi (résumé)": "Continuité de facturation, paiement des obligations et accès aux comptes.",
+    "Documents détaillés associés (SCORE TOP10)": "• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Coordonnées institutions financières (Finances)\n• Accès numériques / méthode (Organisation)",
+    "Top 10 (détaillé) associés": "• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Accès numériques / méthode (Organisation)"
+  },
+  {
+    "Règle": "RD5",
+    "Si (condition basée sur les réponses)": "Q10 contient Placements gérés par un conseiller",
+    "Documents à proposer (numéro - nom)": "16 - Placements avec conseiller; 15 - Retraite et rentes; 14 - Assurances (vie, invalidité, habitation, automobile, collectives)",
+    "Priorité": "Élevée",
+    "Pourquoi (résumé)": "Faciliter la coordination avec le conseiller et les prestations liées.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Assurance habitation (Logement et biens)\n• Bénéficiaires retraite (Retraite)\n• RRQ (Retraite)\n• Relevés de retraite (Retraite)\n• Régime privé (Retraite)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)"
+  },
+  {
+    "Règle": "RD6",
+    "Si (condition basée sur les réponses)": "Q10 contient Placements autogérés",
+    "Documents à proposer (numéro - nom)": "17 - Placements autogérés et actifs numériques; 20 - Accès numériques et mots de passe; 22 - Inventaire des emplacements (où est quoi)",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Réduire le risque de perte d’accès et documenter les procédures de récupération.",
+    "Documents détaillés associés (SCORE TOP10)": "• Accès numériques / méthode (Organisation)\n• Instructions quoi faire en premier (Organisation)",
+    "Top 10 (détaillé) associés": "• Accès numériques / méthode (Organisation)\n• Instructions quoi faire en premier (Organisation)"
+  },
+  {
+    "Règle": "RD7",
+    "Si (condition basée sur les réponses)": "Q10 contient Actifs numériques importants (par exemple cryptomonnaies)",
+    "Documents à proposer (numéro - nom)": "17 - Placements autogérés et actifs numériques; 20 - Accès numériques et mots de passe; 22 - Inventaire des emplacements (où est quoi)",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Sans procédure d’accès, ces actifs peuvent être perdus; prioriser la sécurisation.",
+    "Documents détaillés associés (SCORE TOP10)": "• Accès numériques / méthode (Organisation)\n• Instructions quoi faire en premier (Organisation)",
+    "Top 10 (détaillé) associés": "• Accès numériques / méthode (Organisation)\n• Instructions quoi faire en premier (Organisation)"
+  },
+  {
+    "Règle": "RD8",
+    "Si (condition basée sur les réponses)": "Q11 contient Locataire",
+    "Documents à proposer (numéro - nom)": "13 - Logement et biens immobiliers; 19 - Contrats et abonnements",
+    "Priorité": "Élevée",
+    "Pourquoi (résumé)": "Bail, paiements et résiliation rapide si nécessaire.",
+    "Documents détaillés associés (SCORE TOP10)": "• Acte de vente / Bail (Logement et biens)\n• Hypothèque / Prêteur (Logement et biens)\n• Taxes municipales et scolaires (Logement et biens)",
+    "Top 10 (détaillé) associés": "• Acte de vente / Bail (Logement et biens)"
+  },
+  {
+    "Règle": "RD9",
+    "Si (condition basée sur les réponses)": "Q11 contient Propriétaire de votre résidence",
+    "Documents à proposer (numéro - nom)": "13 - Logement et biens immobiliers; 14 - Assurances (vie, invalidité, habitation, automobile, collectives); 28 - Inventaire des biens de valeur",
+    "Priorité": "Élevée",
+    "Pourquoi (résumé)": "Titres, hypothèque, assurance habitation, inventaire des biens.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Acte de vente / Bail (Logement et biens)\n• Assurance habitation (Logement et biens)\n• Hypothèque / Prêteur (Logement et biens)\n• Taxes municipales et scolaires (Logement et biens)\n• Document symbolique (Valeur personnelle)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)\n• Acte de vente / Bail (Logement et biens)"
+  },
+  {
+    "Règle": "RD10",
+    "Si (condition basée sur les réponses)": "Q11 contient Plus d’une propriété",
+    "Documents à proposer (numéro - nom)": "13 - Logement et biens immobiliers; 28 - Inventaire des biens de valeur; 14 - Assurances (vie, invalidité, habitation, automobile, collectives); 19 - Contrats et abonnements",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Gestion multi-biens : taxes, assurances, titres, contrats.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Acte de vente / Bail (Logement et biens)\n• Assurance habitation (Logement et biens)\n• Hypothèque / Prêteur (Logement et biens)\n• Taxes municipales et scolaires (Logement et biens)\n• Document symbolique (Valeur personnelle)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)\n• Acte de vente / Bail (Logement et biens)"
+  },
+  {
+    "Règle": "RD11",
+    "Si (condition basée sur les réponses)": "Q11 contient Vous louez un logement à quelqu’un",
+    "Documents à proposer (numéro - nom)": "13 - Logement et biens immobiliers; 19 - Contrats et abonnements; 14 - Assurances (vie, invalidité, habitation, automobile, collectives); 28 - Inventaire des biens de valeur",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Baux, loyers, obligations de propriétaire bailleur et assurance.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Acte de vente / Bail (Logement et biens)\n• Assurance habitation (Logement et biens)\n• Hypothèque / Prêteur (Logement et biens)\n• Taxes municipales et scolaires (Logement et biens)\n• Document symbolique (Valeur personnelle)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)\n• Acte de vente / Bail (Logement et biens)"
+  },
+  {
+    "Règle": "RD12",
+    "Si (condition basée sur les réponses)": "Q12 = Endettement élevé ou retards importants",
+    "Documents à proposer (numéro - nom)": "24 - Liste des obligations (dettes, paiements essentiels); 12 - Crédits, cartes et dettes (contrats); 11 - Comptes bancaires (inventaire); 10 - Impôts et déclarations; 30 - Prestations et organismes (allocations, chômage, aides)",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Prioriser paiements essentiels, éviter pénalités, suivre les échanges avec organismes.",
+    "Documents détaillés associés (SCORE TOP10)": "• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Coordonnées institutions financières (Finances)\n• Factures prioritaires (Finances)",
+    "Top 10 (détaillé) associés": "• Cartes de crédit / Prêts (Finances)\n• Comptes bancaires (Finances)\n• Factures prioritaires (Finances)"
+  },
+  {
+    "Règle": "RD13",
+    "Si (condition basée sur les réponses)": "Q12 = Procédure encadrée (plan de remboursement encadré, faillite personnelle, surendettement)",
+    "Documents à proposer (numéro - nom)": "24 - Liste des obligations (dettes, paiements essentiels); 12 - Crédits, cartes et dettes (contrats); 10 - Impôts et déclarations; 30 - Prestations et organismes (allocations, chômage, aides); 27 - Ententes familiales et régime du couple",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Rassembler preuves et documents de procédure; clarifier responsabilités et limites d’action.",
+    "Documents détaillés associés (SCORE TOP10)": "• Cartes de crédit / Prêts (Finances)\n• Factures prioritaires (Finances)\n• Acte de mariage / Contrat d’union (Situation familiale)\n• Jugement de divorce / Séparation (Situation familiale)",
+    "Top 10 (détaillé) associés": "• Cartes de crédit / Prêts (Finances)\n• Factures prioritaires (Finances)"
+  },
+  {
+    "Règle": "RD14",
+    "Si (condition basée sur les réponses)": "Q13 = Oui",
+    "Documents à proposer (numéro - nom)": "29 - Véhicules (immatriculation, assurance, financement); 14 - Assurances (vie, invalidité, habitation, automobile, collectives); 12 - Crédits, cartes et dettes (contrats)",
+    "Priorité": "Moyenne à élevée",
+    "Pourquoi (résumé)": "Immatriculation, assurance, financement : éviter suspension ou pénalités.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Cartes de crédit / Prêts (Finances)\n• Assurance habitation (Logement et biens)\n• Documents liés aux biens (auto, terrain) (Logement et biens)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)\n• Cartes de crédit / Prêts (Finances)"
+  },
+  {
+    "Règle": "RD15",
+    "Si (condition basée sur les réponses)": "Q7 = Retraité",
+    "Documents à proposer (numéro - nom)": "15 - Retraite et rentes; 7 - Informations de santé (fiche santé, médecins, médicaments); 14 - Assurances (vie, invalidité, habitation, automobile, collectives)",
+    "Priorité": "Élevée",
+    "Pourquoi (résumé)": "Rentes, santé et assurances : continuité et prestations survivant.",
+    "Documents détaillés associés (SCORE TOP10)": "• Assurance auto (Assurances)\n• Assurance collective (Assurances)\n• Assurance invalidité (Assurances)\n• Assurance vie (Assurances)\n• Désignation des bénéficiaires (Assurances)\n• Assurance habitation (Logement et biens)\n• Bénéficiaires retraite (Retraite)\n• RRQ (Retraite)\n• Relevés de retraite (Retraite)\n• Régime privé (Retraite)\n• Directives médicales (Santé)\n• Informations médicales importantes (Santé)\n• Liste médicaments / allergies (Santé)",
+    "Top 10 (détaillé) associés": "• Assurance vie (Assurances)\n• Directives médicales (Santé)\n• Informations médicales importantes (Santé)\n• Liste médicaments / allergies (Santé)"
+  },
+  {
+    "Règle": "RD16",
+    "Si (condition basée sur les réponses)": "Q16 contient Proche aidant pour un parent",
+    "Documents à proposer (numéro - nom)": "25 - Dossier de proche aidé (parents ou autre); 7 - Informations de santé (fiche santé, médecins, médicaments); 26 - Procurations et autorisations temporaires",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Dossier du proche aidé prêt : contacts, routine, autorisations.",
+    "Documents détaillés associés (SCORE TOP10)": "• Directives médicales (Santé)\n• Informations médicales importantes (Santé)\n• Liste médicaments / allergies (Santé)",
+    "Top 10 (détaillé) associés": "• Directives médicales (Santé)\n• Informations médicales importantes (Santé)\n• Liste médicaments / allergies (Santé)"
+  },
+  {
+    "Règle": "RD17",
+    "Si (condition basée sur les réponses)": "Q2 = Oui",
+    "Documents à proposer (numéro - nom)": "3 - Actes d'état civil; 10 - Impôts et déclarations; 11 - Comptes bancaires (inventaire); 27 - Ententes familiales et régime du couple",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Double pays : actes, impôts, banques et ententes. Demandes plus nombreuses.",
+    "Documents détaillés associés (SCORE TOP10)": "• Comptes bancaires (Finances)\n• Coordonnées institutions financières (Finances)\n• Acte de naissance (Identité et statut légal)\n• Acte de décès (Situation familiale)\n• Acte de mariage / Contrat d’union (Situation familiale)\n• Jugement de divorce / Séparation (Situation familiale)",
+    "Top 10 (détaillé) associés": "• Comptes bancaires (Finances)\n• Acte de naissance (Identité et statut légal)\n• Acte de décès (Situation familiale)"
+  },
+  {
+    "Règle": "RD18",
+    "Si (condition basée sur les réponses)": "Q16 contient Séparation conflictuelle ou litige probable",
+    "Documents à proposer (numéro - nom)": "27 - Ententes familiales et régime du couple; 28 - Inventaire des biens de valeur; 22 - Inventaire des emplacements (où est quoi); 24 - Liste des obligations (dettes, paiements essentiels)",
+    "Priorité": "Très élevée",
+    "Pourquoi (résumé)": "Réduire les conflits : documents datés, inventaire, preuves et journal des actions.",
+    "Documents détaillés associés (SCORE TOP10)": "• Factures prioritaires (Finances)\n• Instructions quoi faire en premier (Organisation)\n• Acte de mariage / Contrat d’union (Situation familiale)\n• Jugement de divorce / Séparation (Situation familiale)\n• Document symbolique (Valeur personnelle)",
+    "Top 10 (détaillé) associés": "• Factures prioritaires (Finances)\n• Instructions quoi faire en premier (Organisation)"
+  },
+  {
+    "Règle": null,
+    "Si (condition basée sur les réponses)": null,
+    "Documents à proposer (numéro - nom)": null,
+    "Priorité": null,
+    "Pourquoi (résumé)": null,
+    "Documents détaillés associés (SCORE TOP10)": null,
+    "Top 10 (détaillé) associés": null
+  },
+  {
+    "Règle": "Mise à jour 2026-01-09 : données détaillées importées depuis 'Dalinia_Documents_complets_avec_consignes_SCORE_TOP10.xlsx' (onglet 'Documents Dalinia – complet').",
+    "Si (condition basée sur les réponses)": null,
+    "Documents à proposer (numéro - nom)": null,
+    "Priorité": null,
+    "Pourquoi (résumé)": null,
+    "Documents détaillés associés (SCORE TOP10)": null,
+    "Top 10 (détaillé) associés": null
+  }
+]

@@ -1,0 +1,389 @@
+[
+  {
+    "Catégorie": "Identité et statut légal",
+    "Document": "Carte d’assurance maladie",
+    "À quoi sert ce document (1 phrase)": "Permet d’accéder aux soins et de prouver la couverture santé.",
+    "Contacts / organismes à joindre": "RAMQ / Services de santé",
+    "Consignes pour la personne-relais": "À présenter uniquement pour des soins ou démarches médicales.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Identité et statut légal",
+    "Document": "Pièce d’identité principale",
+    "À quoi sert ce document (1 phrase)": "Permet de prouver l’identité dans la majorité des démarches.",
+    "Contacts / organismes à joindre": "Gouvernement / Institutions",
+    "Consignes pour la personne-relais": "Utiliser en premier pour confirmer l’identité.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Identité et statut légal",
+    "Document": "Passeport",
+    "À quoi sert ce document (1 phrase)": "Prouve l’identité et la citoyenneté à l’international.",
+    "Contacts / organismes à joindre": "Gouvernement / Immigration",
+    "Consignes pour la personne-relais": "À utiliser seulement si requis officiellement.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Identité et statut légal",
+    "Document": "Acte de naissance",
+    "À quoi sert ce document (1 phrase)": "Prouve l’identité et la filiation légale.",
+    "Contacts / organismes à joindre": "Directeur de l’état civil",
+    "Consignes pour la personne-relais": "Document sensible, à garder confidentiel.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Identité et statut légal",
+    "Document": "Certificat de citoyenneté / Carte RP / Permis",
+    "À quoi sert ce document (1 phrase)": "Prouve le statut légal au Canada.",
+    "Contacts / organismes à joindre": "IRCC / Gouvernement",
+    "Consignes pour la personne-relais": "À fournir seulement si le statut est requis.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Situation familiale",
+    "Document": "Acte de mariage / Contrat d’union",
+    "À quoi sert ce document (1 phrase)": "Prouve le lien légal entre conjoints.",
+    "Contacts / organismes à joindre": "Notaire / État civil",
+    "Consignes pour la personne-relais": "Utile pour confirmer les droits du conjoint.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Situation familiale",
+    "Document": "Jugement de divorce / Séparation",
+    "À quoi sert ce document (1 phrase)": "Clarifie les droits et obligations après une séparation.",
+    "Contacts / organismes à joindre": "Tribunal / Avocat",
+    "Consignes pour la personne-relais": "À consulter avant toute décision financière.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Situation familiale",
+    "Document": "Actes de naissance des enfants",
+    "À quoi sert ce document (1 phrase)": "Prouvent le lien légal avec les enfants.",
+    "Contacts / organismes à joindre": "École / Notaire",
+    "Consignes pour la personne-relais": "Utiliser uniquement si une preuve est demandée.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Situation familiale",
+    "Document": "Documents d’adoption",
+    "À quoi sert ce document (1 phrase)": "Prouvent la filiation légale en cas d’adoption.",
+    "Contacts / organismes à joindre": "Notaire / Tribunal",
+    "Consignes pour la personne-relais": "Document clé, à conserver en sécurité.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Situation familiale",
+    "Document": "Acte de décès",
+    "À quoi sert ce document (1 phrase)": "Prouve officiellement le décès d’une personne.",
+    "Contacts / organismes à joindre": "Directeur de l’état civil",
+    "Consignes pour la personne-relais": "Indispensable pour les démarches administratives.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Logement et biens",
+    "Document": "Acte de vente / Bail",
+    "À quoi sert ce document (1 phrase)": "Prouve le droit d’occuper ou de posséder le logement.",
+    "Contacts / organismes à joindre": "Notaire / Propriétaire",
+    "Consignes pour la personne-relais": "Document prioritaire pour la gestion du logement.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Logement et biens",
+    "Document": "Hypothèque / Prêteur",
+    "À quoi sert ce document (1 phrase)": "Indique les obligations financières liées au logement.",
+    "Contacts / organismes à joindre": "Institution financière",
+    "Consignes pour la personne-relais": "Ne rien modifier sans confirmation.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Logement et biens",
+    "Document": "Taxes municipales et scolaires",
+    "À quoi sert ce document (1 phrase)": "Permet de vérifier les montants à payer.",
+    "Contacts / organismes à joindre": "Municipalité",
+    "Consignes pour la personne-relais": "S’assurer qu’elles sont payées.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Logement et biens",
+    "Document": "Assurance habitation",
+    "À quoi sert ce document (1 phrase)": "Protège le logement en cas de sinistre.",
+    "Contacts / organismes à joindre": "Assureur",
+    "Consignes pour la personne-relais": "Contacter l’assureur rapidement en cas de problème.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Logement et biens",
+    "Document": "Documents liés aux biens (auto, terrain)",
+    "À quoi sert ce document (1 phrase)": "Prouvent la propriété de biens importants.",
+    "Contacts / organismes à joindre": "SAAQ / Notaire",
+    "Consignes pour la personne-relais": "Utile pour vendre ou assurer un bien.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Finances",
+    "Document": "Comptes bancaires",
+    "À quoi sert ce document (1 phrase)": "Permettent de localiser l’argent disponible.",
+    "Contacts / organismes à joindre": "Institutions financières",
+    "Consignes pour la personne-relais": "Identifier les paiements automatiques.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Finances",
+    "Document": "Cartes de crédit / Prêts",
+    "À quoi sert ce document (1 phrase)": "Indiquent les dettes et obligations en cours.",
+    "Contacts / organismes à joindre": "Banques / Émetteurs",
+    "Consignes pour la personne-relais": "Éviter les retards de paiement.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Finances",
+    "Document": "Revenus récurrents",
+    "À quoi sert ce document (1 phrase)": "Permettent d’anticiper les entrées d’argent.",
+    "Contacts / organismes à joindre": "Employeur / Gouvernement",
+    "Consignes pour la personne-relais": "Vérifier si les revenus continuent.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Finances",
+    "Document": "Factures prioritaires",
+    "À quoi sert ce document (1 phrase)": "Évitent les pénalités ou coupures.",
+    "Contacts / organismes à joindre": "Fournisseurs",
+    "Consignes pour la personne-relais": "À payer en priorité.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Finances",
+    "Document": "Coordonnées institutions financières",
+    "À quoi sert ce document (1 phrase)": "Permettent de poser des questions rapidement.",
+    "Contacts / organismes à joindre": "Banques",
+    "Consignes pour la personne-relais": "Commencer par un appel avant toute action.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Assurances",
+    "Document": "Assurance vie",
+    "À quoi sert ce document (1 phrase)": "Déclenche un soutien financier en cas de décès.",
+    "Contacts / organismes à joindre": "Assureur",
+    "Consignes pour la personne-relais": "Contacter l’assureur avant toute décision.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Assurances",
+    "Document": "Assurance invalidité",
+    "À quoi sert ce document (1 phrase)": "Protège le revenu en cas d’incapacité.",
+    "Contacts / organismes à joindre": "Assureur",
+    "Consignes pour la personne-relais": "Vérifier les délais de déclaration.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Assurances",
+    "Document": "Assurance collective",
+    "À quoi sert ce document (1 phrase)": "Couvre santé et protections via l’employeur.",
+    "Contacts / organismes à joindre": "Employeur / Assureur",
+    "Consignes pour la personne-relais": "Informer l’employeur rapidement.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Assurances",
+    "Document": "Assurance auto",
+    "À quoi sert ce document (1 phrase)": "Protège le véhicule en cas d’accident.",
+    "Contacts / organismes à joindre": "Assureur",
+    "Consignes pour la personne-relais": "Déclarer tout sinistre.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Assurances",
+    "Document": "Désignation des bénéficiaires",
+    "À quoi sert ce document (1 phrase)": "Indique qui reçoit les prestations.",
+    "Contacts / organismes à joindre": "Assureur / Institution",
+    "Consignes pour la personne-relais": "Ne pas présumer des bénéficiaires.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Retraite",
+    "Document": "RRQ",
+    "À quoi sert ce document (1 phrase)": "Indique les droits à la retraite ou prestations.",
+    "Contacts / organismes à joindre": "Retraite Québec",
+    "Consignes pour la personne-relais": "Utile pour information, non urgent.",
+    "Score (0-1-2)": 0.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Retraite",
+    "Document": "Régime privé",
+    "À quoi sert ce document (1 phrase)": "Complète les revenus de retraite.",
+    "Contacts / organismes à joindre": "Administrateur du régime",
+    "Consignes pour la personne-relais": "Conserver les coordonnées.",
+    "Score (0-1-2)": 0.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Retraite",
+    "Document": "Relevés de retraite",
+    "À quoi sert ce document (1 phrase)": "Donnent une vue d’ensemble des droits acquis.",
+    "Contacts / organismes à joindre": "Institutions",
+    "Consignes pour la personne-relais": "À consulter ultérieurement.",
+    "Score (0-1-2)": 0.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Retraite",
+    "Document": "Bénéficiaires retraite",
+    "À quoi sert ce document (1 phrase)": "Détermine qui reçoit les montants.",
+    "Contacts / organismes à joindre": "Administrateur",
+    "Consignes pour la personne-relais": "Vérifier leur existence.",
+    "Score (0-1-2)": 0.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Santé",
+    "Document": "Informations médicales importantes",
+    "À quoi sert ce document (1 phrase)": "Permettent aux soignants d’agir correctement.",
+    "Contacts / organismes à joindre": "Médecin / Pharmacien",
+    "Consignes pour la personne-relais": "À partager uniquement aux professionnels.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Santé",
+    "Document": "Liste médicaments / allergies",
+    "À quoi sert ce document (1 phrase)": "Évite les erreurs médicales.",
+    "Contacts / organismes à joindre": "Médecin",
+    "Consignes pour la personne-relais": "Toujours accessible.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Santé",
+    "Document": "Directives médicales",
+    "À quoi sert ce document (1 phrase)": "Expriment les volontés de soins.",
+    "Contacts / organismes à joindre": "Médecin / Notaire",
+    "Consignes pour la personne-relais": "À respecter en priorité.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Santé",
+    "Document": "Documents enfants / personnes à charge",
+    "À quoi sert ce document (1 phrase)": "Permettent leur prise en charge.",
+    "Contacts / organismes à joindre": "École / Garde",
+    "Consignes pour la personne-relais": "À transmettre si nécessaire.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Organisation",
+    "Document": "Personne-relais",
+    "À quoi sert ce document (1 phrase)": "Identifie qui doit être contacté en premier.",
+    "Contacts / organismes à joindre": "Personne désignée",
+    "Consignes pour la personne-relais": "Commencer par cette personne.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Organisation",
+    "Document": "Contacts clés",
+    "À quoi sert ce document (1 phrase)": "Facilitent les démarches urgentes.",
+    "Contacts / organismes à joindre": "Notaire / Assureur / Employeur",
+    "Consignes pour la personne-relais": "Centraliser les communications.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Organisation",
+    "Document": "Instructions quoi faire en premier",
+    "À quoi sert ce document (1 phrase)": "Guide les premières actions.",
+    "Contacts / organismes à joindre": "—",
+    "Consignes pour la personne-relais": "Suivre l’ordre indiqué.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Organisation",
+    "Document": "Accès numériques / méthode",
+    "À quoi sert ce document (1 phrase)": "Permet d’accéder aux informations en ligne.",
+    "Contacts / organismes à joindre": "—",
+    "Consignes pour la personne-relais": "Ne jamais partager sans précaution.",
+    "Score (0-1-2)": 2.0,
+    "Top 10 (Oui / Non)": "Oui"
+  },
+  {
+    "Catégorie": "Organisation",
+    "Document": "Volontés personnelles",
+    "À quoi sert ce document (1 phrase)": "Expriment ce qui est important pour la personne.",
+    "Contacts / organismes à joindre": "—",
+    "Consignes pour la personne-relais": "À respecter dans la mesure du possible.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Valeur personnelle",
+    "Document": "Lettre personnelle",
+    "À quoi sert ce document (1 phrase)": "Transmet un message aux proches.",
+    "Contacts / organismes à joindre": "—",
+    "Consignes pour la personne-relais": "À lire au bon moment.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Valeur personnelle",
+    "Document": "Document symbolique",
+    "À quoi sert ce document (1 phrase)": "A une valeur affective importante.",
+    "Contacts / organismes à joindre": "—",
+    "Consignes pour la personne-relais": "À conserver avec soin.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": "Valeur personnelle",
+    "Document": "Instructions particulières",
+    "À quoi sert ce document (1 phrase)": "Donne des consignes spécifiques.",
+    "Contacts / organismes à joindre": "—",
+    "Consignes pour la personne-relais": "À suivre si possible.",
+    "Score (0-1-2)": 1.0,
+    "Top 10 (Oui / Non)": "Non"
+  },
+  {
+    "Catégorie": null,
+    "Document": null,
+    "À quoi sert ce document (1 phrase)": null,
+    "Contacts / organismes à joindre": null,
+    "Consignes pour la personne-relais": null,
+    "Score (0-1-2)": null,
+    "Top 10 (Oui / Non)": null
+  },
+  {
+    "Catégorie": "Mise à jour 2026-01-09 : données détaillées importées depuis 'Dalinia_Documents_complets_avec_consignes_SCORE_TOP10.xlsx' (onglet 'Documents Dalinia – complet').",
+    "Document": null,
+    "À quoi sert ce document (1 phrase)": null,
+    "Contacts / organismes à joindre": null,
+    "Consignes pour la personne-relais": null,
+    "Score (0-1-2)": null,
+    "Top 10 (Oui / Non)": null
+  }
+]

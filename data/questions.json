@@ -1,0 +1,191 @@
+[
+  {
+    "Identifiant": "Q1",
+    "Question (texte exact)": "Où vivez-vous principalement ? ",
+    "Type de champ": "Choix unique",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Québec; France; Autre (champ texte)",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déterminer les règles et documents selon le pays."
+  },
+  {
+    "Identifiant": "Q2",
+    "Question (texte exact)": "Avez-vous aussi des biens, revenus ou obligations dans un autre pays ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Identifier une situation internationale (démarches plus complexes)."
+  },
+  {
+    "Identifiant": "Q3",
+    "Question (texte exact)": "Quelle est votre situation de foyer ?",
+    "Type de champ": "Choix unique",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Personne seule; Couple; Parent seul; Famille recomposée; Autre (champ texte)",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Classer le cas d’affaires familial principal."
+  },
+  {
+    "Identifiant": "Q4",
+    "Question (texte exact)": "Si vous êtes en couple : quel est votre statut ?",
+    "Type de champ": "Choix unique",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Marié ou uni civilement; Pacte civil de solidarité; Union de fait ou concubinage (pas marié); Autre (champ texte)",
+    "Condition d'affichage (logique simple)": "Afficher seulement si Q3 = Couple",
+    "Objectif (à quoi ça sert)": "Repérer le cas critique du couple non marié et les documents à prioriser."
+  },
+  {
+    "Identifiant": "Q5",
+    "Question (texte exact)": "Avez-vous des personnes à charge ?",
+    "Type de champ": "Cases à cocher",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Enfant(s) mineur(s); Adulte dépendant (handicap ou besoin d’aide); Aucun",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher les documents enfants ou dépendance."
+  },
+  {
+    "Identifiant": "Q6",
+    "Question (texte exact)": "Si vous avez des enfants mineurs : garde partagée ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Afficher seulement si Q5 contient Enfant(s) mineur(s)",
+    "Objectif (à quoi ça sert)": "Identifier famille recomposée et risque de conflit / coordination."
+  },
+  {
+    "Identifiant": "Q7",
+    "Question (texte exact)": "Votre source principale de revenus aujourd’hui ?",
+    "Type de champ": "Choix unique",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Emploi salarié (secteur privé); Emploi salarié (secteur public); Travailleur autonome; Propriétaire d’entreprise; Retraité; Étudiant ou jeune adulte dépendant; Prestations ou revenu instable",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher les documents liés au travail, à l’entreprise, à la retraite ou aux prestations."
+  },
+  {
+    "Identifiant": "Q8",
+    "Question (texte exact)": "Votre activité doit-elle continuer si vous êtes indisponible 2 semaines ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Afficher seulement si Q7 = Travailleur autonome OU Q7 = Propriétaire d’entreprise",
+    "Objectif (à quoi ça sert)": "Déclencher le plan de continuité (clients, factures, obligations)."
+  },
+  {
+    "Identifiant": "Q9",
+    "Question (texte exact)": "Avez-vous une personne qui peut prendre le relais (associé, collègue, proche) ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Afficher seulement si Q8 = Oui",
+    "Objectif (à quoi ça sert)": "Identifier la capacité de relève et la nécessité d’un plan écrit."
+  },
+  {
+    "Identifiant": "Q10",
+    "Question (texte exact)": "Vos placements et comptes d’investissement :",
+    "Type de champ": "Cases à cocher",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Aucun; Placements gérés par un conseiller; Placements autogérés (plateforme en ligne); Actifs numériques importants (par exemple cryptomonnaies)",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher l’inventaire des placements et les consignes d’accès."
+  },
+  {
+    "Identifiant": "Q11",
+    "Question (texte exact)": "Logement et immobilier :",
+    "Type de champ": "Cases à cocher",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Locataire; Propriétaire de votre résidence; Plus d’une propriété; Vous louez un logement à quelqu’un",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher documents logement, titres, baux et gestion locative."
+  },
+  {
+    "Identifiant": "Q12",
+    "Question (texte exact)": "Dettes : votre situation est laquelle ?",
+    "Type de champ": "Choix unique",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Dettes habituelles sans difficulté majeure; Endettement élevé ou retards importants; Procédure encadrée (plan de remboursement encadré, faillite personnelle, surendettement)",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher les documents de dettes et les consignes d’urgence."
+  },
+  {
+    "Identifiant": "Q13",
+    "Question (texte exact)": "Avez-vous au moins un véhicule ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher documents véhicule si applicable."
+  },
+  {
+    "Identifiant": "Q14",
+    "Question (texte exact)": "Si vous avez un véhicule : est-il financé (paiements) ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Afficher seulement si Q13 = Oui",
+    "Objectif (à quoi ça sert)": "Déclencher les consignes liées au prêt et à l’assurance du véhicule."
+  },
+  {
+    "Identifiant": "Q15",
+    "Question (texte exact)": "Souhaitez-vous planifier clairement “qui décide” et “qui gère” en cas d’incapacité (hospitalisation, accident, épuisement) ?",
+    "Type de champ": "Oui / Non",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Oui; Non",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher l’accent sur les documents d’incapacité et procurations."
+  },
+  {
+    "Identifiant": "Q16",
+    "Question (texte exact)": "Votre situation inclut-elle un de ces éléments ?",
+    "Type de champ": "Cases à cocher",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Statut d’immigration ou double nationalité; Adoption ou changement de nom ou filiation complexe; Proche aidant pour un parent; Séparation conflictuelle ou litige probable; Aucune",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Déclencher les cas fréquents de complexité et documents spécifiques."
+  },
+  {
+    "Identifiant": "Q17",
+    "Question (texte exact)": "Préférence d’organisation",
+    "Type de champ": "Choix unique",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Papier; Numérique; Hybride",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Adapter les consignes (où ranger, qui a accès, copies)."
+  },
+  {
+    "Identifiant": "Q18",
+    "Question (texte exact)": "Qui sont vos 2 personnes ressources ?",
+    "Type de champ": "Groupe de champs",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Personne ressource 1 : nom; lien; téléphone; courriel. Personne ressource 2 : nom; lien; téléphone; courriel.",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Choisir les contacts réels et personnaliser toutes les consignes."
+  },
+  {
+    "Identifiant": "Q19",
+    "Question (texte exact)": "Avez-vous déjà ces documents ?",
+    "Type de champ": "Cases à cocher",
+    "Obligatoire": "Oui",
+    "Choix proposés / champs": "Testament; Document pour l’incapacité; Procuration temporaire; Liste des comptes; Liste des dettes et paiements essentiels; Procédure d’accès aux comptes en ligne; Inventaire 'où est quoi'; Volontés funéraires; Aucun",
+    "Condition d'affichage (logique simple)": "Toujours",
+    "Objectif (à quoi ça sert)": "Mesurer l’écart et prioriser le plan d’action (ce qui manque)."
+  },
+  {
+    "Identifiant": null,
+    "Question (texte exact)": null,
+    "Type de champ": null,
+    "Obligatoire": null,
+    "Choix proposés / champs": null,
+    "Condition d'affichage (logique simple)": null,
+    "Objectif (à quoi ça sert)": null
+  },
+  {
+    "Identifiant": "Mise à jour 2026-01-09 : données détaillées importées depuis 'Dalinia_Documents_complets_avec_consignes_SCORE_TOP10.xlsx' (onglet 'Documents Dalinia – complet').",
+    "Question (texte exact)": null,
+    "Type de champ": null,
+    "Obligatoire": null,
+    "Choix proposés / champs": null,
+    "Condition d'affichage (logique simple)": null,
+    "Objectif (à quoi ça sert)": null
+  }
+]
