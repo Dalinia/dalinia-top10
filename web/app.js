@@ -1,9 +1,11 @@
 console.log("APP VERSION 14-01-16:50");
 // --- CONFIG ---
 // On lit tes JSON dans ../data (comme ton dossier web est à côté de data)
-const PATH_QUESTIONS = "../data/questions.json";
-const PATH_DOCS = "../data/documents.json";
-const PATH_RULES = "../data/regles.json";
+const BASE = "/dalinia-top10";
+const PATH_QUESTIONS = `${BASE}/data/questions.json`;
+const PATH_DOCS      = `${BASE}/data/documents.json`;
+const PATH_RULES     = `${BASE}/data/regles.json`;
+
 
 // Webhook Make (on le garde pour plus tard, mais il n'est pas utilisé tant que le mail n'est pas réglé)
 const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/gntxj633fdhcf906n1mu78bjwad4jn1m";
@@ -461,7 +463,8 @@ function computeTop10(answers, docs, rules) {
 
       // Redirection (robuste)
 alert("Top10 stocké, je redirige");
-window.location.href = "/web/result.html";
+const BASE = "/dalinia-top10";
+window.location.href = `${BASE}/web/result.html`;
     });
 
   } catch (err) {
@@ -469,3 +472,4 @@ window.location.href = "/web/result.html";
     alert("Erreur au chargement : " + (err?.message || err));
   }
 })();
+
