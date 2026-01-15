@@ -1,22 +1,9 @@
 console.log("APP VERSION 14-01-16:50");
 // --- CONFIG ---
 // On lit tes JSON dans ../data (comme ton dossier web est à côté de data)
-// --- Base path compatible GitHub Pages ---
-// Exemple: /dalinia-top10/web/  => BASE = "/dalinia-top10"
-// Exemple local: /web/          => BASE = ""
-const BASE = (() => {
-  const p = window.location.pathname;
-  const idx = p.indexOf("/web/");
-  if (idx >= 0) return p.slice(0, idx);
-  const idx2 = p.indexOf("/web");
-  if (idx2 >= 0) return p.slice(0, idx2);
-  return "";
-})();
-
-// --- CONFIG ---
-const PATH_QUESTIONS = `${BASE}/data/questions.json`;
-const PATH_DOCS      = `${BASE}/data/documents.json`;
-const PATH_RULES     = `${BASE}/data/regles.json`;
+const PATH_QUESTIONS = "../data/questions.json";
+const PATH_DOCS = "../data/documents.json";
+const PATH_RULES = "../data/regles.json";
 
 // Webhook Make (on le garde pour plus tard, mais il n'est pas utilisé tant que le mail n'est pas réglé)
 const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/gntxj633fdhcf906n1mu78bjwad4jn1m";
@@ -297,18 +284,62 @@ async function sendTop10ByEmail(payload) {
 
 // --- Scoring engine (MVP) ---
 function computeTop10(answers, docs, rules) {
-  const byName = new Map(docs.map(d => [safeText(d["Document"] || d["Nom"] || d["Titre"]), d]));
+  // Index documents (détaillés) par nom
+  const byName = new Map(docs.map(d => [safeText(d["Document"] || d["Nom"] || d["Titre"]).trim(), d]));
+
   const score = new Map();
   const why = new Map();
 
+  // Récupère une réponse "texte" même si checkbox (Q5__xxx=1)
+  function getAnswerText(qid) {
+    const direct = answers[qid];
+    if (direct && String(direct).trim()) return String(direct).trim();
+
+    // checkbox => on reconstruit à partir des clés QID__CHOIX
+    const picked = Object.keys(answers)
+      .filter(k => k.startsWith(qid + "__") && String(answers[k]) === "1")
+      .map(k => k.split("__").slice(1).join("__"))
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    return picked.join("; ");
+  }
+
+  // Convertit une cellule multi-lignes type "• Carte ... (Finances)" en ["Carte ...", ...]
+  function parseDetailedDocs(cell) {
+    const txt = safeText(cell);
+    if (!txt) return [];
+
+    return txt
+      .split(/\r?\n|;+/)                // lignes ou ;
+      .map(s => s.trim())
+      .filter(Boolean)
+      .map(s => s.replace(/^•\s*/g, "")) // retire puce
+      .map(s => s.replace(/\s*\([^)]*\)\s*$/g, "")) // retire "(Finances)" en fin
+      .map(s => s.trim())
+      .filter(Boolean);
+  }
+
   function add(docName, pts, reason) {
-    const key = safeText(docName);
-    if (!byName.has(key)) return;
+    const key = safeText(docName).trim();
+    if (!key) return;
+    if (!byName.has(key)) return; // si ça ne match pas, on n'ajoute pas (évite bruit)
     score.set(key, (score.get(key) || 0) + pts);
     if (!why.has(key) && reason) why.set(key, reason);
   }
 
-  // Base Dalinia (déclencher l’action)
+  // Map priorité -> points (ajuste si tu veux)
+  function ptsFromPriority(p) {
+    const x = safeText(p).toLowerCase();
+    if (x.includes("obligatoire")) return 10;
+    if (x.includes("très")) return 7;
+    if (x.includes("élev")) return 5;
+    if (x.includes("moy")) return 3;
+    if (x.includes("faib")) return 1;
+    return 3;
+  }
+
+  // 1) Base Dalinia (détaillée)
   const base = [
     "Personne-relais",
     "Contacts clés",
@@ -319,43 +350,67 @@ function computeTop10(answers, docs, rules) {
   ];
   for (const d of base) add(d, 10, "Base Dalinia : permet d’agir immédiatement");
 
-  // Règles (MVP heuristique)
+  // 2) Application des règles depuis la bonne colonne (docs détaillés)
   for (const r of rules) {
-    const doc = safeText(r["Document"] || r["Doc"] || r["Document proposé"] || r["Proposition"]);
-    const qid = normalizeId(r["QuestionID"] || r["Identifiant"] || r["Question"] || r["Code"]);
-    const cond = safeText(r["Condition"] || r["Si"] || r["Règle"] || "");
-    const ptsRaw = r["Points"] ?? r["Score"] ?? r["Poids"] ?? 3;
-    const pts = Number(ptsRaw) || 3;
+    const cond = safeText(r["Si (condition basée sur les réponses)"] || r["Si"] || r["Condition"] || r["Règle"] || "");
+    const prio = r["Priorité"] || r["Priority"] || "";
+    const pts = ptsFromPriority(prio);
 
-    if (cond.toLowerCase().includes("toujours") || cond.toLowerCase().includes("always")) {
-      add(doc, pts, "Règle : toujours recommandé");
+    // ⬇️ ICI : on lit les docs détaillés, pas les docs "numéro - nom"
+    const detailedCell =
+      r["Documents détaillés associés (SCORE TOP10)"] ||
+      r["Top 10 (détaillé) associés"] ||
+      r["Documents détaillés associés"] ||
+      "";
+
+    const detailedDocs = parseDetailedDocs(detailedCell);
+
+    if (!cond) continue;
+
+    // Règle toujours
+    if (cond.toLowerCase().includes("toujours")) {
+      for (const docName of detailedDocs) add(docName, pts, "Règle : toujours recommandé");
       continue;
     }
 
-    if (qid && answers[qid]) {
-      const ans = safeText(answers[qid]).toLowerCase();
-      const c = cond.toLowerCase();
+    // Conditions type: "Q5 contient Enfant(s) mineur(s)" ou "Q7 = Travailleur autonome"
+    // Extraction du QID (Q1, Q2...)
+    const m = cond.match(/\b(Q\d+)\b/i);
+    if (!m) continue;
 
-      if (c.includes("contient")) {
-        const needle = c.split("contient").pop().trim();
-        if (needle && ans.includes(needle)) add(doc, pts, `Parce que votre réponse (${qid}) correspond à la règle`);
-      } else if (c.includes("=") || c.includes("égal")) {
-        const val = c.split("=").pop().trim();
-        if (val && ans === val) add(doc, pts, `Parce que votre réponse (${qid}) correspond à la règle`);
-      } else {
-        if (c && ans.includes(c)) add(doc, pts, `Parce que votre réponse (${qid}) active cette règle`);
-      }
+    const qid = m[1].toUpperCase();
+    const ansText = getAnswerText(qid).toLowerCase();
+    const c = cond.toLowerCase();
+
+    let matched = false;
+
+    if (c.includes("contient")) {
+      const needle = c.split("contient").pop().trim().toLowerCase();
+      if (needle && ansText.includes(needle)) matched = true;
+    } else if (c.includes("=") || c.includes("égal")) {
+      const val = c.split("=").pop().trim().toLowerCase();
+      if (val && ansText === val) matched = true;
+    } else {
+      // fallback : mot-clé
+      if (ansText && c && ansText.includes(c)) matched = true;
+    }
+
+    if (matched) {
+      for (const docName of detailedDocs) add(docName, pts, `Parce que votre réponse (${qid}) active cette règle`);
     }
   }
 
+  // 3) Top 10
   return Array.from(score.entries())
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 10)
-    .map(([name, pts]) => {
-      const d = byName.get(name);
-      return { ...d, _score: pts, _why: why.get(name) || "" };
-    });
+    .slice(0, 20)
+    .map(([name, pts]) => ({
+      ...byName.get(name),
+      _score: pts,
+      _why: why.get(name) || ""
+    }));
 }
+
 
 // --- Boot ---
 (async function init() {
@@ -406,7 +461,7 @@ function computeTop10(answers, docs, rules) {
 
       // Redirection (robuste)
 alert("Top10 stocké, je redirige");
-window.location.href = `${BASE}/web/result.html`;
+window.location.href = "/web/result.html";
     });
 
   } catch (err) {
@@ -414,4 +469,3 @@ window.location.href = `${BASE}/web/result.html`;
     alert("Erreur au chargement : " + (err?.message || err));
   }
 })();
-
